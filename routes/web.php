@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+
+Route::get('/', [\App\Http\Controllers\PostController::class, 'index'])->name('home');
+
+//    Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
+//    Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
